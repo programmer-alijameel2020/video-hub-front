@@ -1,23 +1,39 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Main from "../views/User/Main.vue";
+import Dashboard from "../views/User/Dashboard.vue";
+import LandPage from "../views/LandPage.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "land-page",
+    component: LandPage,
   },
+
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    path: "/main",
+    name: "main",
+    component: Main,
+    redirect: "/Main/dashboard",
+    children: [
+      {
+        path: "dashboard",
+        name: "dashboard",
+        component: Dashboard,
+      },
+    ],
+    /*    //the protection layer for the rootes for unauthenticated
+    beforeEnter: (to, from, next) => {
+      if (!store.getters["authenticated"]) {
+        return next({
+          name: "Login",
+        });
+      }
+      next();
+    }, */
   },
 ];
 
