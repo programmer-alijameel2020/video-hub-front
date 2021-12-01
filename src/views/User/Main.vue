@@ -2,7 +2,14 @@
   <div class="main-container">
     <UpperDivision />
     <v-container :fluid="fluidState" class="contain-body mt-1">
-      <router-view />
+      <v-row>
+        <v-col cols="12" class="sidebar">
+          <Sidebar />
+        </v-col>
+        <v-col cols="12" md="10" sm="12" lg="10">
+          <router-view />
+        </v-col>
+      </v-row>
     </v-container>
     <div class="footer-height">
       <Footer />
@@ -13,11 +20,13 @@
 <script>
 import UpperDivision from "../../components/UpperDivision";
 import Footer from "../../components/Footer";
+import Sidebar from "../../components/Sidebar.vue";
 export default {
   name: "contentPage",
   components: {
     UpperDivision,
     Footer,
+    Sidebar,
   },
   data() {
     return {
@@ -43,6 +52,10 @@ export default {
 </script>
 
 <style lang="scss" scopped>
+.sidebar {
+  max-width: 10%;
+}
+
 .footer-height {
   height: 5vh !important;
 }
@@ -50,6 +63,18 @@ export default {
 .contain-body {
   height: 85vh !important;
   overflow-y: auto !important;
+}
+
+@media only screen and (max-width: 1300px) {
+  .sidebar {
+    max-width: 20%;
+  }
+}
+
+@media only screen and (max-width: 1026px) {
+  .sidebar {
+    max-width: 20%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
