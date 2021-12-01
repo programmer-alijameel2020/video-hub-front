@@ -1,0 +1,87 @@
+.logo-shadow {
+  filter: drop-shadow(0 0.8rem 0.45rem rgba(0, 0, 0, 0.2)) !important;
+}
+
+.grayFont {
+  color: #455a64 !important;
+}
+
+.logo-container {
+  border-radius: 10% !important;
+}
+.logo-container-main {
+  border-radius: 10% !important;
+}
+.logo-container2 {
+  border-radius: 10px !important;
+}
+.custom-fonts {
+  font-weight: bold !important;
+}
+.header-fonts {
+  font-weight: bold !important;
+  color: #d50000 !important;
+}
+.v-btn,
+.v-card {
+  border-radius: 4px !important;
+}
+.v-card__title {
+  color: #455a64 !important;
+}
+.transparent {
+  background-color: transparent !important;
+}
+.loginBtn {
+  border: 2px solid #37474f !important;
+  text-transform: none !important;
+  color: #37474f;
+  font-weight: normal;
+}
+
+.loginBtn:hover {
+  transition: 0.3s;
+  border: 2px solid #37474f !important;
+  text-transform: none !important;
+  color: #f1f1f1 !important;
+  background-color: #37474f !important;
+}
+
+h3,
+h3,
+h3 {
+  padding-bottom: 8px !important;
+  padding-top: 12px !important;
+}
+
+.unrounded-card {
+  border-radius: 0px !important;
+  filter: drop-shadow(0px 2px 2px #cfd8dc) !important;
+}
+
+.upperShadow {
+  filter: drop-shadow(0px -2px 2px #cfd8dc) !important;
+}
+
+.whiteRow {
+  background-color: #ffff !important;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
+.main-content {
+  max-height: 90vh !important;
+}
+
+html,
+body {
+  overflow: auto !important;
+}
