@@ -8,7 +8,7 @@
         ></v-app-bar-nav-icon>
         <v-col cols="3" md="1" lg="1" class="text-right">
           <img
-            src="../assets/logos/logo22.svg"
+            src="../assets/logos/modern/vh-trans.svg"
             alt="forms-image"
             width="50px"
             height="auto"
@@ -16,28 +16,18 @@
           />
         </v-col>
         <v-col cols="12" md="3" lg="3" sm="12" class="text-left">
-          <h4 class="header-fonts">Electronic Education Arts</h4>
-          <h6>All in one platfrom that innovate the future</h6>
+          <h4 class="header-fonts">Video Hub Platform V.1.0</h4>
+          <h6>An interactive e-platform for education</h6>
         </v-col>
-        <v-spacer></v-spacer>
-        <v-tabs v-model="tab" align-with-title class="d-none d-sm-flex">
-          <v-tabs-slider color="#D90429"></v-tabs-slider>
-          <v-tab v-for="(item, i) in items" :key="i" :to="item.route">
-            <div v-if="item.id != 2">{{ item.name }}</div>
-            <div v-if="item.id == 2">
-              <v-menu transition="slide-y-transition" bottom>
-                <template v-slot:activator="{ on, attrs }">
-                  <span v-bind="attrs" v-on="on">{{ item.name }}</span>
-                </template>
-                <v-list>
-                  <v-list-item v-for="(item, i) in subitems" :key="i">
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </div>
-          </v-tab>
-        </v-tabs>
+        <v-col cols="12" md="4" lg="4" sm="12" class="text-left mt-3">
+          <v-text-field
+            class="small-text"
+            label="Search"
+            persistent-hint
+            outlined
+            dense
+          ></v-text-field>
+        </v-col>
         <v-spacer></v-spacer>
       </template>
     </v-app-bar>
@@ -112,6 +102,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.header-fonts {
+  font-weight: bold !important;
+  color: #d32f2f !important;
+}
 #nav {
   background: #fff;
   -moz-box-shadow: none;
@@ -132,5 +126,8 @@ export default {
   background: #fff !important;
   border: none;
   box-shadow: none;
+}
+.small-text input {
+  font-size: 1.2em;
 }
 </style>
