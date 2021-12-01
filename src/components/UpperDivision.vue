@@ -37,8 +37,11 @@
       <v-list nav dense>
         <v-list-item-group>
           <v-list-item v-for="(item, i) in items" :key="i" :to="item.route">
+            <v-icon v-text="item.icon" small></v-icon>
             <v-list-item-content>
-              <v-list-item-title>{{ item.name }}</v-list-item-title>
+              <v-list-item-title class="ps-2">{{
+                item.title
+              }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
@@ -55,39 +58,42 @@ export default {
       tab: null,
       items: [
         {
-          id: 1,
-          name: "Home",
-          route: "firstPage",
+          title: "Main Dashboard",
+          icon: "mdi-home",
+          route: "/user/dashboard/main",
+        },
+        {
+          title: "Your Videos",
+          icon: "mdi-video",
+          route: "/user/dashboard/new-record",
         },
 
         {
-          id: 2,
-          name: "Services",
-          route: "",
+          title: "Public Videos",
+          icon: "mdi-earth",
+          route: "/user/dashboard/display-data",
         },
 
         {
-          id: 3,
-          name: "Pricing",
-          route: "",
+          title: "Favourite",
+          icon: "mdi-heart",
+          route: "/user/dashboard/display-data",
         },
 
         {
-          id: 4,
-          name: "Clientes",
-          route: "",
+          title: "Linked Accounts",
+          icon: "mdi-account-multiple",
+          route: "/user/dashboard/report-data",
         },
-
         {
-          id: 5,
-          name: "Sign-in",
-          route: "contact",
+          title: "Video Studio",
+          icon: "mdi-pencil",
+          route: "/user/dashboard/user-activity",
         },
-
         {
-          id: 6,
-          name: "About and Contact",
-          route: "about",
+          title: "Settings",
+          icon: "mdi-cog",
+          route: "/user/dashboard/user-settings",
         },
       ],
       subitems: [

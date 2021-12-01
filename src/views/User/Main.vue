@@ -3,7 +3,11 @@
     <UpperDivision />
     <v-container :fluid="fluidState" class="contain-body mt-1">
       <v-row>
-        <v-col cols="12" class="sidebar">
+        <v-col
+          cols="12"
+          class="sidebar"
+          v-show="this.$vuetify.breakpoint.mdAndUp"
+        >
           <Sidebar />
         </v-col>
         <v-col cols="12" md="10" sm="12" lg="10">

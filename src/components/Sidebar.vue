@@ -1,5 +1,5 @@
 <template>
-  <v-list dense right class="mt-2 pa-md-2 px-md-3 pa-0 text-left transparent">
+  <v-list dense right class="mt-2 pa-md-2 px-md-6 pa-0 text-left transparent">
     <v-list-item-group v-model="selectedItem">
       <v-list-item
         v-for="(item, i) in items"
@@ -46,6 +46,12 @@ export default {
           title: "Your Videos",
           icon: "mdi-video",
           route: "/user/dashboard/new-record",
+        },
+
+        {
+          title: "Public Videos",
+          icon: "mdi-earth",
+          route: "/user/dashboard/display-data",
         },
 
         {
