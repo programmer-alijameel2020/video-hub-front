@@ -44,14 +44,14 @@
         <v-col cols="12" md="5" lg="5" sm="5" class="text-left mt-0 pt-1">
           <v-icon class="ms-3 circular pa-2">mdi-bell</v-icon>
           <v-icon
-            v-show="$vuetify.breakpoint.mdAndDown"
+            v-show="$vuetify.breakpoint.smOnly == true"
             class="ms-3 circular pa-2"
             >mdi-magnify</v-icon
           >
           <v-avatar
             class="ms-3"
             size="40px"
-            v-show="$vuetify.breakpoint.smOnly"
+            v-show="$vuetify.breakpoint.smOnly == true"
           >
             <img
               src="https://cdn.vuetifyjs.com/images/john.jpg"
@@ -96,9 +96,11 @@
               </v-list-item>
               <v-divider></v-divider>
               <v-list-item v-for="(item, i) in dropdownItems" :key="i">
+                <v-icon v-text="item.icon" small></v-icon>
                 <v-list-item-title
                   class="text-left ps-2 list-item-style d-none d-md-block"
-                  >{{ item.title }}</v-list-item-title
+                >
+                  {{ item.title }}</v-list-item-title
                 >
               </v-list-item>
             </v-list>
@@ -174,7 +176,33 @@ export default {
 
       dropdownItems: [
         {
-          title: "Settings",
+          title: "Account setting",
+          icon: "mdi-cog",
+          route: "/user/dashboard/user-settings",
+        },
+        {
+          title: "Your membership",
+          icon: "mdi-wallet-membership",
+          route: "/user/dashboard/user-settings",
+        },
+        {
+          title: "Account location",
+          icon: "mdi-map-marker",
+          route: "/user/dashboard/user-settings",
+        },
+        {
+          title: "Help and Support",
+          icon: "mdi-help-circle",
+          route: "/user/dashboard/user-settings",
+        },
+        {
+          title: "Feedback",
+          icon: "mdi-message-alert",
+          route: "/user/dashboard/user-settings",
+        },
+        {
+          title: "Sign out",
+          icon: "mdi-logout",
           route: "/user/dashboard/user-settings",
         },
       ],
