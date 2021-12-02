@@ -48,15 +48,27 @@
             class="ms-3 circular pa-2"
             >mdi-magnify</v-icon
           >
+          <v-avatar
+            class="ms-3"
+            size="40px"
+            v-show="$vuetify.breakpoint.smOnly"
+          >
+            <img
+              src="https://cdn.vuetifyjs.com/images/john.jpg"
+              alt="UserProfile"
+            />
+          </v-avatar>
 
           <v-menu
             transition="slide-y-transition"
             bottom
             offset-y
             :rounded="rounded"
+            v-show="$vuetify.breakpoint.mdAndUp"
           >
             <template v-slot:activator="{ on, attrs }">
               <button
+                v-show="$vuetify.breakpoint.mdAndUp"
                 class="profile-button cut-text"
                 data-toggle="dropdown"
                 v-bind="attrs"
@@ -70,7 +82,9 @@
                     alt="John"
                   />
                 </v-avatar>
-                username@vh <v-icon>mdi-chevron-down</v-icon>
+                <span class="user-title">
+                  username@vh <v-icon>mdi-chevron-down</v-icon></span
+                >
               </button>
             </template>
             <v-list>
@@ -229,12 +243,12 @@ export default {
 .red-text {
   color: #e53935;
 }
+
+.user-title {
+  font-size: 14px !important;
+  font-weight: normal !important;
+}
+
 @media only screen and (max-width: 600px) {
-  .cut-text {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 130px;
-    white-space: nowrap;
-  }
 }
 </style>
