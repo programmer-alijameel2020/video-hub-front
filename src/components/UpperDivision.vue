@@ -6,20 +6,25 @@
           @click="drawer = true"
           class="d-flex d-sm-none"
         ></v-app-bar-nav-icon>
-        <v-col cols="3" md="1" lg="1" class="text-right">
-          <img
-            src="../assets/logos/modern/vh-trans.svg"
-            alt="forms-image"
-            width="50px"
-            height="auto"
-            class="logoImag"
-          />
-        </v-col>
-        <v-col cols="12" md="3" lg="3" sm="12" class="text-left">
+        <img
+          src="../assets/logos/modern/vh-trans.svg"
+          alt="forms-image"
+          width="50px"
+          height="auto"
+          class="logoImag mb-2"
+        />
+        <v-col cols="12" md="3" lg="3" sm="3" class="text-left">
           <h4 class="header-fonts">Video Hub Platform V.1.0</h4>
           <h6>An interactive e-platform for education</h6>
         </v-col>
-        <v-col cols="12" md="4" lg="4" sm="12" class="text-left mt-3">
+        <v-col
+          cols="12"
+          md="4"
+          lg="4"
+          sm="12"
+          class="text-left mt-3"
+          v-show="$vuetify.breakpoint.mdAndUp"
+        >
           <v-text-field
             class="small-text"
             label="Search"

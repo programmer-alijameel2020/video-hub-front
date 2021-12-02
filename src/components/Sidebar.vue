@@ -1,5 +1,5 @@
 <template>
-  <v-list dense right class="mt-2 pa-md-2 px-md-6 pa-0 text-left transparent">
+  <v-list dense right class="mt-1 pa-0 text-left transparent">
     <v-list-item-group v-model="selectedItem">
       <v-list-item
         v-for="(item, i) in items"
