@@ -71,6 +71,17 @@ export default {
           route: "/user/dashboard/user-activity",
         },
         {
+          title: "Watch History",
+          icon: "mdi-clock",
+          route: "/user/dashboard/user-activity",
+        },
+
+        {
+          title: "Account status",
+          icon: "mdi-certificate",
+          route: "/user/dashboard/new-record",
+        },
+        {
           title: "Settings",
           icon: "mdi-cog",
           route: "/user/dashboard/user-settings",
